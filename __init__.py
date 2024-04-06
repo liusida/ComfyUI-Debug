@@ -10,7 +10,7 @@ def size_to_human_readable(size_in_bytes):
     else:
         return f"{size_in_bytes / 1024**4:.1f} TB"
 
-class DebugWatchNode:
+class DebugInspectorNode:
     def __init__(self):
         pass
     
@@ -57,7 +57,7 @@ class DebugWatchNode:
 
         return { "ui": { "string_field": results } }
 
-class DebugWatchModelNode:
+class DebugModelInspectorNode:
     def __init__(self):
         pass
     
@@ -95,12 +95,12 @@ WEB_DIRECTORY = "./js"
 # A dictionary that contains all nodes you want to export with their names
 # NOTE: names should be globally unique
 NODE_CLASS_MAPPINGS = {
-    "DebugWatchNode": DebugWatchNode,
-    "DebugWatchModelNode": DebugWatchModelNode,
+    "DebugInspectorNode": DebugInspectorNode,
+    "DebugModelInspectorNode": DebugModelInspectorNode,
 }
 
 # A dictionary that contains the friendly/humanly readable titles for the nodes
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "DebugWatchNode": "Debug Watch",
-    "DebugWatchModelNode": "Debug Watch Model",
+    "DebugInspectorNode": "Debug: Inspector",
+    "DebugModelInspectorNode": "Debug: Model Inspector",
 }
