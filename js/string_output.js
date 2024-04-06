@@ -26,14 +26,14 @@ function updateStringWidgetContent(nodeId, widgetName, newContent) {
 api.addEventListener('executed', event => {
     const detail = event.detail;
 
-    // Check if `output` exists and has a `string_field`
-    if (detail.output && Array.isArray(detail.output.string_field)) {
+    // Check if `output` exists and has a `output`
+    if (detail.output && Array.isArray(detail.output.output)) {
         // Join the array elements into a string
-        const content = detail.output.string_field.join('');
+        const content = detail.output.output.join('');
 
         // Example node ID and widget name, replace with actual ones
         const nodeId = parseInt(app.runningNodeId); // Replace with actual node ID
-        const widgetName = 'string_field'; // Replace with actual widget name
+        const widgetName = 'output'; // Replace with actual widget name
 
         updateStringWidgetContent(nodeId, widgetName, content);
     } else {
