@@ -1,0 +1,14 @@
+[project]
+name = "comfyui-debug"
+description = "Attach a debug node to an output to obtain more detailed information. Uncover the details of your models in ComfyUI with ease."
+version = "1.0.0"
+license = "LICENSE"
+
+[project.urls]
+Repository = "https://github.com/liusida/ComfyUI-Debug"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-Debug"
+Icon = ""
